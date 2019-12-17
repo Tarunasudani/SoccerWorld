@@ -1,0 +1,40 @@
+.hdiv{
+    background-color: rgb(3, 4, 78);
+    color: antiquewhite;
+}
+
+body{
+    background-image:url("ftbl2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mclass{
+    
+    padding: 100px;
+    text-align: justify;
+    margin-top: 500px;
+    margin-bottom: 150px;
+}
+
+.style1{
+    background-color: slategray;
+}
+
+.style2{
+    padding: 10px;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.c1{
+    height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#std{
+    color: whitesmoke;
+}
