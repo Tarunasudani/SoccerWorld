@@ -12,15 +12,21 @@ $('#bt1').click(function(req,res){
         $('#container1').empty();
         var count = response.count;
         console.log(count); 
-        for(var i=0;i<count;i++){
-          var fixture="";
-          var fixture1="";
-          fixture=fixture+response.matches[i].competition.name+":";
-          fixture1=fixture1+response.matches[i].homeTeam.name+" vs "+response.matches[i].awayTeam.name;
-          $("#container1").append('<li class="list-group-item ">'+fixture+'</li>');
-          $("#container1").append('<li class="list-group-item ">'+fixture1+'</li>');
-          $("#container1").append('<ul >'+'</ul>');
+        if(count===0){
+          $('#container1').append('<li class="list-group-item ">No Fixtures Today</li>');
         }
+        else{
+          for(var i=0;i<count;i++){
+            var fixture="";
+            var fixture1="";
+            fixture=fixture+response.matches[i].competition.name+":";
+            fixture1=fixture1+response.matches[i].homeTeam.name+" vs "+response.matches[i].awayTeam.name;
+            $("#container1").append('<li class="list-group-item ">'+fixture+'</li>');
+            $("#container1").append('<li class="list-group-item ">'+fixture1+'</li>');
+            $("#container1").append('<ul >'+'</ul>');
+          }
+        }
+        
         console.log(response);
       });
 });
@@ -43,9 +49,11 @@ $('#bt2').click(function(req,res){
           var fixture="";
           var fixture1="";
           fixture=fixture+response.matches[i].competition.name+":";
-          fixture1=fixture1+response.matches[i].homeTeam.name+" vs "+response.matches[i].awayTeam.name;
-          $("#container1").append('<li >'+fixture+'</li>');
-          $("#container1").append('<li >'+fixture1+'</li>');
+          var sc1 = response.matches[i].score.fullTime.homeTeam;
+          var sc2 = response.matches[i].score.fullTime.awayTeam;
+          fixture1=fixture1+response.matches[i].homeTeam.name+ " " + sc1 +"-" + sc2 + "  "+ response.matches[i].awayTeam.name;
+          $("#container1").append('<li class="list-group-item ">'+fixture+'</li>');
+          $("#container1").append('<li class="list-group-item ">'+fixture1+'</li>');
         }
         console.log(response);
 
@@ -67,12 +75,14 @@ $('#bt3').click(function(req,res){
         var count = response.count;
         console.log(count); 
         for(var i=0;i<count;i++){
-            var fixture="";
-            var fixture1="";
-            fixture=fixture+response.matches[i].competition.name+":";
-            fixture1=fixture1+response.matches[i].homeTeam.name+" vs "+response.matches[i].awayTeam.name;
-            $("#container1").append('<li class="list-group-item ">'+fixture+'</li>');
-            $("#container1").append('<li class="list-group-item ">'+fixture1+'</li>');
+          var fixture="";
+          var fixture1="";
+          fixture=fixture+response.matches[i].competition.name+":";
+          var sc1 = response.matches[i].score.fullTime.homeTeam;
+          var sc2 = response.matches[i].score.fullTime.awayTeam;
+          fixture1=fixture1+response.matches[i].homeTeam.name+ " " + sc1 +"-" + sc2 + "  "+ response.matches[i].awayTeam.name;
+          $("#container1").append('<li class="list-group-item ">'+fixture+'</li>');
+          $("#container1").append('<li class="list-group-item ">'+fixture1+'</li>');
         }  
         console.log(response);
       });
