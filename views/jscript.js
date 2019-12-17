@@ -1,7 +1,7 @@
 $('#bt1').click(function(req,res){
     console.log("button clicked");
     //res.render("index.html");
-    var url1 = "http://api.football-data.org/v2/matches?status=SCHEDULED";
+    var url1 = "https://api.football-data.org/v2/matches?status=SCHEDULED";
     $.ajax({
         headers: { 'X-Auth-Token': 'cee08a1bf40a43a6aa1d3c789473710b' },
         url: url1,
@@ -34,7 +34,7 @@ $('#bt1').click(function(req,res){
 $('#bt2').click(function(req,res){
     console.log("button clicked");
     //res.render("index.html");
-    var url1 = "http://api.football-data.org/v2/matches?status=LIVE";
+    var url1 = "httpss://api.football-data.org/v2/matches?status=LIVE";
     $.ajax({
         headers: { 'X-Auth-Token': 'cee08a1bf40a43a6aa1d3c789473710b' },
         url: url1,
@@ -63,7 +63,7 @@ $('#bt2').click(function(req,res){
 $('#bt3').click(function(req,res){
     console.log("button clicked");
     //res.render("index.html");
-    var url1 = "http://api.football-data.org/v2/matches?status=FINISHED";
+    var url1 = "https://api.football-data.org/v2/matches?status=FINISHED";
     $.ajax({
         headers: { 'X-Auth-Token': 'cee08a1bf40a43a6aa1d3c789473710b' },
         url: url1,
@@ -92,7 +92,7 @@ $('#bt3').click(function(req,res){
 $('#bt4').click(function(req,res){
   console.log("button clicked");
   //res.render("index.html");
-  var url1="https://apiv2.apifootball.com/?action=get_standings&league_id=148&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
+  var url1="httpss://apiv2.apifootball.com/?action=get_standings&league_id=148&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
   
   $.ajax({
       
@@ -119,7 +119,7 @@ $('#bt4').click(function(req,res){
 $('#bt5').click(function(req,res){
   console.log("button clicked");
   //res.render("index.html");
-  var url1="https://apiv2.apifootball.com/?action=get_standings&country_id=135&league_id=468&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
+  var url1="httpss://apiv2.apifootball.com/?action=get_standings&country_id=135&league_id=468&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
   
   $.ajax({
       
@@ -145,7 +145,7 @@ $('#bt5').click(function(req,res){
 $('#bt6').click(function(req,res){
   console.log("button clicked");
   //res.render("index.html");
-  var url1="https://apiv2.apifootball.com/?action=get_standings&league_id=195&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
+  var url1="httpss://apiv2.apifootball.com/?action=get_standings&league_id=195&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
   
   $.ajax({
       
@@ -172,7 +172,7 @@ $('#bt6').click(function(req,res){
 $('#bt7').click(function(req,res){
   console.log("button clicked");
   //res.render("index.html");
-  var url1="https://apiv2.apifootball.com/?action=get_standings&league_id=176&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
+  var url1="httpss://apiv2.apifootball.com/?action=get_standings&league_id=176&APIkey=016aa60b4579a277d5fa98de8e30132a08d99cf90082799c3de161ecb0aadfb1";
   
   $.ajax({
       
